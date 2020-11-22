@@ -1,0 +1,7 @@
+{
+    "name": "ra-common",
+    "version": "0.0.1",
+    "description": "RA Common",
+    "main": "dist/index.js",
+    "types": "dist/index.d.ts"
+}
