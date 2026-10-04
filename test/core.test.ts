@@ -91,9 +91,9 @@ test("crypto hash + password + hashcash + multihash", () => {
   assert.ok(Multihash.fromHex(m.toHex()).equals(m));
   assert.ok(Multihash.fromBase58(m.toBase58()).equals(m));
 
-  const hc = HashCash.mint("brian@resolvingarchitecture.io", 10);
+  const hc = HashCash.mint("brian@resolvingarchitecture.dev", 10);
   assert.ok(hc.computedBits() >= 10);
-  assert.ok(hc.isValidFor("brian@resolvingarchitecture.io", 10));
+  assert.ok(hc.isValidFor("brian@resolvingarchitecture.dev", 10));
   assert.ok(!hc.isValidFor("nope", 10));
   assert.equal(HashCash.parse(hc.token).resource, hc.resource);
 
